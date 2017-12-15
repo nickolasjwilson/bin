@@ -1,0 +1,14 @@
+#!/usr/bin/env python
+"""Beautifies lines of JSON objects.
+
+Each line in the input must be a complete JSON object.
+"""
+
+
+import fileinput
+import json
+
+
+for line in fileinput.input():
+    json_object = json.loads(line)
+    print(json.dumps(json_object, sort_keys=True, indent=4))

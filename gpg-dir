@@ -1,0 +1,10 @@
+#!/bin/sh
+#
+# Encrypt a directory into an archive.
+#
+# Make the stem of the archive's name the directory's name.
+
+set -eu
+
+no_trailing_slash=${1%/}
+gpg-zip -c -o "${no_trailing_slash}.zip.gpg" "${no_trailing_slash}"
