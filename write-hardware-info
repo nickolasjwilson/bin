@@ -1,9 +1,0 @@
-#!/bin/bash
-#
-# Write information about the hardware to an HTML file.
-
-set -eu
-
-FILE="${HOME}/tmp/hardware_info.html"
-sudo lshw -html > ${FILE}
-echo "Hardware information has been written to the file "'"'"${FILE}"'"'"."
